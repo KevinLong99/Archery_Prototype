@@ -43,11 +43,22 @@ public class PullInteraction : XRBaseInteractable
             {
                 Vector3 pullPosition = pullingInteractor.transform.position;
                 pullAmount = CalculatePull(pullPosition);
+
                 UpdateString();
+                HapticFeedback();
             }
         }
     }
 
+    private void HapticFeedback()
+    {
+        if(pullingInteractor != null)
+        {
+            ActionBasedController currentController = pullingInteractor.transform.gameObject.GetComponent<ActionBasedController>();
+            Debug.Log(pullingInteractor.transform.gameObject.GetComponent<ActionBasedController>());
+            currentController.SendHapticImpulse(pullAmount,.1f);
+        }
+    }
 
     private float CalculatePull(Vector3 pullPosition)
     {
