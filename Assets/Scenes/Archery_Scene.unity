@@ -297,6 +297,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 609863971609345284, guid: 1b6d9920203cf204ca025db14635a195, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 609863971609345284, guid: 1b6d9920203cf204ca025db14635a195, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2586866863678513473, guid: 1b6d9920203cf204ca025db14635a195, type: 3}
       propertyPath: m_InteractionManager
       value: 
